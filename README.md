@@ -14,5 +14,8 @@
 - Spring Boot
 - Maven
 
-### Status
-Day 1 completed successfully ✅
+
+## Day 2 – Controller & Path Variables
+- Added multiple GET endpoints
+- Learned @RequestMapping
+- Used PathVariable and RequestParam
