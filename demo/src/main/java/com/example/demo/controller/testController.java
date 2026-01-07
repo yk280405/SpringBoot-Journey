@@ -1,12 +1,32 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class testController {
     @GetMapping("/hello")
-    public String hello(){
-       return "Day 1 success !";
+    public String hello() {
+        return "Day 2 success !";
+    }
+
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome to Spring Boot";
+    }
+
+    @GetMapping("/status")
+    public String status() {
+        return "Backend running successfully";
+    }
+    @GetMapping("/greet/{name}")
+    public String greet(@PathVariable String name) {
+        return "Hello " + name;
+    }
+    @GetMapping("/add")
+    public int add(@RequestParam int a, @RequestParam int b) {
+        return a + b;
     }
 }
+
+
