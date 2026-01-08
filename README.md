@@ -19,3 +19,8 @@
 - Added multiple GET endpoints
 - Learned @RequestMapping
 - Used PathVariable and RequestParam
+
+## Day 3 – POST API & RequestBody
+- Created model class
+- Built POST API
+- Learned @RequestBody and JSON handling
