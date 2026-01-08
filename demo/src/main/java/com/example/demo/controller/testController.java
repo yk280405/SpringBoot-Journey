@@ -27,6 +27,11 @@ public class testController {
     public int add(@RequestParam int a, @RequestParam int b) {
         return a + b;
     }
+     @PostMapping("/user")
+    public String createUser(@RequestBody User user){
+        return "User" + user.getName() + "age" + user.getAge() + "recieved";
+    }
 }
+
 
 
