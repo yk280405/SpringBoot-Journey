@@ -1,13 +1,22 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
 public class testController {
+
+    private final UserService userService;
+
+    public testController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping("/hello")
     public String hello() {
-        return "Day 2 success !";
+        return "Day 2 success !!";
     }
 
     @GetMapping("/welcome")
@@ -19,19 +28,19 @@ public class testController {
     public String status() {
         return "Backend running successfully";
     }
+
     @GetMapping("/greet/{name}")
     public String greet(@PathVariable String name) {
         return "Hello " + name;
     }
+
     @GetMapping("/add")
     public int add(@RequestParam int a, @RequestParam int b) {
         return a + b;
     }
-     @PostMapping("/user")
-    public String createUser(@RequestBody User user){
-        return "User" + user.getName() + "age" + user.getAge() + "recieved";
+
+    @PostMapping("/user")
+    public String createUser(@RequestBody User user) {
+        return userService.createUser(user.getName(), user.getAge());
     }
 }
-
-
-
