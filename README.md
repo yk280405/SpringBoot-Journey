@@ -24,3 +24,9 @@
 - Created model class
 - Built POST API
 - Learned @RequestBody and JSON handling
+
+- ## Day 4 – Service Layer Introduction
+- Added service layer
+- Implemented controller → service flow
+- Learned separation of concerns
+
